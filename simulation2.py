@@ -6,6 +6,7 @@ pygame.init()
 size = 5
 height = 800
 width = 600
+number_moving = 10
 healthy = (255,255,255)
 infected = (255, 0, 111)
 recovered = (128, 255, 0)
@@ -17,7 +18,13 @@ particles = [Particle(infected, random.randint(0, height), random.randint(0, wid
 for i in range(1, 50):
     x = random.randint(0, height)
     y = random.randint(0, width)
-    particles.append(Particle(healthy, x, y, size))
+    if i < 5:
+        particles.append(Particle(healthy, x, y, size))
+    else:
+        particle = Particle(healthy, x, y, size)
+        particles.append(particle)
+        particle.speed = 0
+
 
 def infection(p1, p2):
     dx = p1.x - p2.x
