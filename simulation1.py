@@ -12,7 +12,6 @@ recovered = (128, 255, 0)
 
 screen = pygame.display.set_mode((height, width))
 
-
 particles = [Particle(infected, random.randint(0, height), random.randint(0, width), size)]
 for i in range(1, 50):
     x = random.randint(0, height)
