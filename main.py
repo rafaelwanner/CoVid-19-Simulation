@@ -1,7 +1,6 @@
 import pygame
 from utils import *
-#from simulation1 import *
-#from simulation2 import *
+
 
 pygame.init()
 
@@ -30,6 +29,15 @@ running = True
 while running:
 
     redrawWindow()
+    font1 = pygame.font.SysFont(None, 40)
+    font2 = pygame.font.SysFont(None, 20)
+    title = font1.render('Welcome to the CoVid-19 Simulation', True, (84, 126, 184))
+    simulation_1 = font2.render('without social distancing', True, (84, 126, 184))
+    simulation_2 = font2.render('with social distancing', True, (84, 126, 184))
+    screen.blit(title, (150, 100))
+    screen.blit(simulation_1, (145, 300))
+    screen.blit(simulation_2, (505, 300))
+
 
     for event in pygame.event.get():
         #print(event)
