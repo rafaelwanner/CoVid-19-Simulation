@@ -15,10 +15,10 @@ screen = pygame.display.set_mode((height, width))
 
 
 particles = [Particle(infected, random.randint(0, height), random.randint(0, width), size)]
-for i in range(1, 50):
+for i in range(1, 100):
     x = random.randint(0, height)
     y = random.randint(0, width)
-    if i < 5:
+    if i < 10:
         particles.append(Particle(healthy, x, y, size))
     else:
         particle = Particle(healthy, x, y, size)
